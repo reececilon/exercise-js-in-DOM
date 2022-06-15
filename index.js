@@ -9,6 +9,7 @@ const body = document.getElementById('body')
 const create = document.getElementById('create')
 
 toggle.addEventListener('click', changeColor)
+greeting.addEventListener('mouseover', salutation);
 
 function changeColor() {
 
@@ -54,7 +55,9 @@ body.addEventListener('keydown', (e) => {
    
 })
 
-
+function salutation() {
+    greeting.innerText = 'Greetings!';
+}
 
 
 
