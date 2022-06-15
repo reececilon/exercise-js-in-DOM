@@ -1,14 +1,14 @@
-const toggle = document.getElementById('toggle')
-const header = document.getElementById('changeColor1')
-const greeting = document.getElementById('greeting')
-const bold = document.getElementById('bold')
-const italic = document.getElementById('italic')
-const underline = document.getElementById('underline')
-const paragraph = document.getElementsByTagName('p')
-const body = document.getElementById('body')
-const create = document.getElementById('create')
+const toggle = document.getElementById('toggle');
+const header = document.getElementById('changeColor1');
+const greeting = document.getElementById('greeting');
+const bold = document.getElementById('bold');
+const italic = document.getElementById('italic');
+const underline = document.getElementById('underline');
+const paragraph = document.getElementsByTagName('p');
+const body = document.getElementById('body');
+const create = document.getElementById('create');
 
-toggle.addEventListener('click', changeColor)
+toggle.addEventListener('click', changeColor);
 greeting.addEventListener('mouseover', salutation);
 
 function changeColor() {
@@ -24,9 +24,9 @@ function changeColor() {
     }
 }
 
-greeting.addEventListener('mouseover', () => {
-    greeting.innerText = 'Hello Everyone, Welcome'
-})
+function salutation() {
+    greeting.innerText = 'Greetings!';
+}
 
 bold.addEventListener('click', () => {
     paragraph[0].style.fontSize = '30px'
@@ -46,18 +46,15 @@ underline.addEventListener('click', () => {
     paragraph[2].style.textDecoration = 'underline'
 })
 
+const p = document.createElement('p')
+create.appendChild(p)
 
-body.addEventListener('keydown', (e) => {
+body.addEventListener('keyup', (e) => {
 
-    let p = document.createElement('p')
-    p.innerText = e.key
-    create.appendChild(p)
-   
+    if (e.key == 'Control' || e.key == 'Shift' || e.key == 'Tab' || e.key == 'Comand' || e.key == 'CapsLock' || e.key == 'Alt' || e.key == 'Option' || e.key == 'Graph') { } else { p.innerText += e.key }
 })
 
-function salutation() {
-    greeting.innerText = 'Greetings!';
-}
+
 
 
 
