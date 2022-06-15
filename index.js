@@ -1,7 +1,9 @@
 const toggle = document.getElementById('toggle')
 const header = document.getElementById('changeColor1')
+const greeting = document.getElementById('greeting');
 
 toggle.addEventListener('click', changeColor)
+greeting.addEventListener('mouseover', salutation);
 
 function changeColor() {
 
@@ -16,6 +18,9 @@ function changeColor() {
     }
 }
 
+function salutation() {
+    greeting.innerText = 'Greetings!';
+}
 
 
 
