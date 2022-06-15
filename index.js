@@ -45,16 +45,10 @@ underline.addEventListener('click', () => {
     paragraph[2].style.textDecoration = 'underline'
 })
 
+const p = document.createElement('p')
+create.appendChild(p)
 
-body.addEventListener('keydown', (e) => {
+body.addEventListener('keyup', (e) => {
 
-    let p = document.createElement('p')
-    p.innerText = e.key
-    create.appendChild(p)
-   
+    if (e.key == 'Control' || e.key == 'Shift' || e.key == 'Tab' || e.key == 'Comand' || e.key == 'CapsLock' || e.key == 'Alt' || e.key == 'Option' || e.key == 'Graph') { } else { p.innerText += e.key }
 })
-
-
-
-
-
