@@ -5,6 +5,8 @@ const bold = document.getElementById('bold')
 const italic = document.getElementById('italic')
 const underline = document.getElementById('underline')
 const paragraph = document.getElementsByTagName('p')
+const body = document.getElementById('body')
+const create = document.getElementById('create')
 
 toggle.addEventListener('click', changeColor)
 
@@ -44,7 +46,13 @@ underline.addEventListener('click', () => {
 })
 
 
+body.addEventListener('keydown', (e) => {
 
+    let p = document.createElement('p')
+    p.innerText = e.key
+    create.appendChild(p)
+   
+})
 
 
 
